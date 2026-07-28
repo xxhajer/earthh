@@ -1,0 +1,202 @@
+.dashboardContainer {
+  display: flex;
+  min-height: 100vh;
+  background-color: var(--light-gray);
+}
+
+.sidebar {
+  width: 250px;
+  background: var(--primary-brown);
+  color: white;
+  padding: 2rem 1.5rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.logo {
+  font-size: 1.5rem;
+  color: var(--gold-accent);
+  font-family: var(--font-arabic-display);
+  margin-bottom: 3rem;
+  text-align: center;
+}
+
+.navMenu {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  flex: 1;
+}
+
+.navMenu a {
+  padding: 0.75rem 1rem;
+  border-radius: var(--radius-md);
+  color: rgba(255,255,255,0.8);
+  transition: all var(--transition-fast);
+  font-weight: 500;
+  font-size: 1.1rem;
+  border-left: 4px solid rgba(255,255,255,0.2); /* always visible subtle border */
+  margin-left: -4px; /* align border with left edge */
+}
+
+.navMenu a:hover,
+.navMenu a.active {
+  background: rgba(255,255,255,0.1);
+  color: white;
+  border-left: 4px solid var(--gold-accent);
+  font-weight: bold;
+}
+
+.mainContent {
+  flex: 1;
+  padding: 3rem 4rem;
+  overflow-y: auto;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 3rem;
+}
+
+.availabilityToggle {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 0.75rem 1.5rem;
+  border-radius: var(--radius-full);
+}
+
+.btnAvailable {
+  background: #ecfdf5;
+  color: #059669;
+  border: 1px solid #34d399;
+  padding: 0.5rem 1rem;
+  border-radius: var(--radius-full);
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.btnBusy {
+  background: #fef2f2;
+  color: #dc2626;
+  border: 1px solid #f87171;
+  padding: 0.5rem 1rem;
+  border-radius: var(--radius-full);
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.statsGrid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.5rem;
+  margin-bottom: 4rem;
+}
+
+.statCard {
+  padding: 1.5rem;
+  border-radius: var(--radius-lg);
+  border: 1px solid rgba(0,0,0,0.05);
+}
+
+.statCard h3 {
+  font-size: 2rem;
+  color: var(--primary-teal);
+  margin-bottom: 0.5rem;
+}
+
+.statCard p {
+  color: var(--text-light);
+  font-weight: 500;
+}
+
+.section {
+  margin-bottom: 4rem;
+}
+
+.sectionTitle {
+  font-size: 1.5rem;
+  color: var(--primary-blue);
+  margin-bottom: 1.5rem;
+}
+
+.matchGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1.5rem;
+}
+
+.matchCard {
+  padding: 1.5rem;
+  border-radius: var(--radius-lg);
+  border: 1px solid rgba(0,0,0,0.05);
+}
+
+.matchHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+  border-bottom: 1px solid #eee;
+  padding-bottom: 1rem;
+}
+
+.matchBadge {
+  background: linear-gradient(135deg, var(--primary-teal), var(--primary-blue));
+  color: white;
+  padding: 0.25rem 0.75rem;
+  border-radius: var(--radius-full);
+  font-size: 0.875rem;
+  font-weight: bold;
+}
+
+.matchDetails p {
+  margin-bottom: 0.5rem;
+  color: var(--text-dark);
+}
+
+.matchActions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-top: 1.5rem;
+}
+
+.matchActions button {
+  flex: 1;
+  font-size: 0.875rem;
+  padding: 0.5rem;
+}
+
+.btnText {
+  background: none;
+  border: none;
+  color: var(--text-light);
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+.knowledgeGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+}
+
+.knowledgeCard {
+  padding: 2rem;
+  border-radius: var(--radius-lg);
+  text-align: center;
+  cursor: pointer;
+  transition: transform var(--transition-fast);
+}
+
+.knowledgeCard:hover {
+  transform: translateY(-5px);
+}
+
+.kIcon {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
